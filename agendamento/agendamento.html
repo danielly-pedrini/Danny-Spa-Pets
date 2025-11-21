@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./agendamento.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dany Spa Pet's 🐾</title>
+    <link
+      rel="icon"
+      href="https://cdn-icons-png.flaticon.com/512/616/616408.png"
+    />
+    
+  </head>
+  <body>
+ <header class="header">
+  <div class="container">
+    <a href="../index.html" class="link-fechar">X</a>
+    <div class="header-content">
+      <div class="header-logo">
+        <img src="../src/logo-SPA-Pets.png" alt="">
+      </div>
+      <div class="header-text">
+        <h1>Dany Spa Pet's</h1>
+        <p>Cuidado e carinho para o seu melhor amigo 💖</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Onde o banho vira diversão!</h2>
+        <p>
+          Transforme o momento do banho em uma experiência de amor, cuidado e
+          alegria para o seu pet.
+        </p>
+        <a href="#agendamento" class="btn">Agendar Agora</a>
+      </div>
+      <img src="../src/img-agendamento.png" alt="Pet feliz" />
+    </section>
+
+    <section class="servicos" id="servicos">
+      <h2>💦 Nossos Serviços</h2>
+      <div class="servico-lista">
+        <div class="card">
+          <h3>Porte Pequeno</h3>
+          <ul>
+            <li>Banho - R$50 (40min)</li>
+            <li>Banho e Tosa Higiênica - R$60 (40min)</li>
+            <li>Tosa Máquina - R$80 (90min)</li>
+            <li>Tosa Tesoura - R$150 (180min)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Porte Médio</h3>
+          <ul>
+            <li>Banho - R$60 (40min)</li>
+            <li>Banho e Tosa Higiênica - R$70 (40min)</li>
+            <li>Tosa Máquina - R$90 (90min)</li>
+            <li>Tosa Tesoura - R$180 (180min)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Porte Grande</h3>
+          <ul>
+            <li>Banho - R$150 (90min)</li>
+            <li>Banho e Tosa Higiênica - R$160 (90min)</li>
+            <li>Tosa Máquina - R$180 (120min)</li>
+            <li>Tosa Tesoura - R$250 (180min)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="agendamento" id="agendamento">
+      <h2>📅 Faça seu Agendamento</h2>
+
+      <div class="agendamento-container">
+        <div class="form-wrapper">
+          <h3 style="color: #0066cc; margin-bottom: 1rem">
+            📝 Dados do Agendamento
+          </h3>
+          <form id="agendar-form">
+            <input
+              type="text"
+              id="petName"
+              placeholder="Nome do Pet"
+              required
+            />
+            <input
+              type="text"
+              id="tutorName"
+              placeholder="Nome do Tutor(a)"
+              required
+            />
+            <input
+              type="tel"
+              id="phone"
+              placeholder="Telefone (15 99999-9999)"
+              required
+            />
+
+            <select id="size" required>
+              <option value="">Selecione o porte do pet</option>
+              <option value="pequeno">Pequeno</option>
+              <option value="medio">Médio</option>
+              <option value="grande">Grande</option>
+            </select>
+
+            <select id="service" required>
+              <option value="">Primeiro selecione o porte</option>
+            </select>
+
+            <input type="date" id="date" required />
+
+            <select id="time" required>
+              <option value="">Selecione a data primeiro</option>
+            </select>
+
+            <label
+              ><input type="checkbox" id="hidratacao" /> Hidratação (Pequeno:
+              +R$20 | Médio: +R$30 | Grande: +R$40)</label
+            >
+            <label
+              ><input type="checkbox" id="taxiDog" /> Táxi Dog (+R$30)</label
+            >
+
+            <div id="taxiEndereco" class="hidden">
+              <input
+                type="text"
+                id="rua"
+                placeholder="Rua"
+                style="margin-top: 0.5rem"
+              />
+              <input type="text" id="numero" placeholder="Número" />
+              <input type="text" id="bairro" placeholder="Bairro" />
+            </div>
+
+            <button type="submit" class="btn">Confirmar Agendamento</button>
+          </form>
+        </div>
+
+        <div class="resumo-wrapper">
+          <div id="resumo" class="resumo-agendamento hidden">
+            <h3>📋 Resumo do Agendamento</h3>
+            <div id="resumo-conteudo"></div>
+          </div>
+        </div>
+      </div>
+
+      <p id="mensagem" class="mensagem"></p>
+    </section>
+
+    <footer>
+      <p>© 2025 Dany Spa Pet's — Amor, cuidado e diversão para seu pet 🐾</p>
+    </footer>
+<script src="./agendamento.js"></script>
+  </body>
+</html>
